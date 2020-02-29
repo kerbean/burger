@@ -9,7 +9,7 @@ if (process.env.DB_HOST) {
         password: process.env.DB_PASSWORD,
         database: process.env.DB_NAME
     });
-    console.log("TRUE --");
+    // console.log("TRUE --");
 
 } else {
     connection = mysql.createConnection({
