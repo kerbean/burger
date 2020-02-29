@@ -24,7 +24,6 @@ router.get("/", function (req, res) {
     });
     router.put("/api/burgers/:id", function (req, res) {
         var condition = "id = " + req.params.id;
-
         console.log("API for burgers id: ", condition);
         burger.updateOne({ food_state: req.body.food_state }, condition, function (
             result
