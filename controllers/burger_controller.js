@@ -13,12 +13,11 @@ router.get("/", function (req, res) {
     });
 
     router.post("/api/burgers", function (req, res) {
-        console.log('reach api')
+        console.log('API for burgers : Reached!')
         burger.insertOne(
             ["burger_name", "food_state"],
             [req.body.burger_name, req.body.food_state],
             function (result) {
-                // Send back the ID of new burger
                 res.json({ id: result.insertId });
             }
         );
@@ -26,7 +25,7 @@ router.get("/", function (req, res) {
     router.put("/api/burgers/:id", function (req, res) {
         var condition = "id = " + req.params.id;
 
-        console.log("condition", condition);
+        console.log("API for burgers id: ", condition);
         burger.updateOne({ food_state: req.body.food_state }, condition, function (
             result
         ) {
