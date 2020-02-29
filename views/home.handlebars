@@ -1,0 +1,68 @@
+<div class="container">
+
+    <div class="text-center text-light">
+        <h1>EAT-DA-BURGER</h1>
+        <h4 class="text-light">Burger Orders to prepare for incoming HEART-ATTACK!!</p>
+            <br>
+            <h2>Place order here</h2>
+            <panel>
+                <div class=" form-group">
+                    <label for="newburger">Order Burger Oozing with Grease</label>
+                    <input type="text" id="newburger" name="burger">
+                    <button class="btn btn-success" id="addburger">
+                        <span class="fa fa-cart-plus"></span>
+                    </button>
+                </div>
+            </panel>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="panel panel-default">
+                <div class="panel-heading" id="leftside">
+                    <h4><strong>Click the heart-attack button to eat burger</strong></h4>
+                    <p>Don't forget to pay before having a heart-attack</p>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        {{#each burgers}}
+                        {{#unless food_state}}
+
+                        <span><strong> {{this.id}} - {{this.burger_name}}</strong></span>
+                        <button type="button" class="eat-thy-buns btn btn-success" id="eatbutton" data-id="{{this.id}}"
+                            data-newfood_state="{{devour}}"><span class="fa fa-heartbeat"></span></button>
+                        <hr>
+                        {{/unless}}
+                        {{/each}}
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="panel panel-default">
+                <div class="panel-heading" id="rightside">
+                    <h4><strong>Burger consumed so far this app went Live! :</strong></h4>
+                    <p>If your burger doesn't exist, prolly you didn't pay. <i>*insert angry emoji here*</i></p>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        {{#each burgers}}
+                        {{#if food_state}}
+                        <span>
+                            <strong> {{this.id}} - {{this.burger_name}}</strong>
+                        </span>
+                        <hr>
+                        {{/if}}
+                        {{/each}}
+                    </ul>
+
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--endrow -->
+</div>
+<!--endcontainer -->

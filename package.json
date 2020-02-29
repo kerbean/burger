@@ -1,0 +1,25 @@
+{
+  "name": "burger",
+  "version": "1.0.0",
+  "description": "burger with handlebars",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kerbean/burger.git"
+  },
+  "author": "Kervin Del Rosario",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kerbean/burger/issues"
+  },
+  "homepage": "https://github.com/kerbean/burger#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "mysql": "^2.18.1"
+  }
+}

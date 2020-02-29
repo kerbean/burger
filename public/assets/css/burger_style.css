@@ -1,0 +1,39 @@
+html{
+    margin:0;
+    height: 100%;
+    width:100%;
+}
+
+body {
+    background-color: lightgray ;
+    background-image: url("../img/resto-bg.jpg");
+    background-size: cover;
+    background-position:  center;
+    background-attachment: fixed;
+  }
+  
+#newburger {
+  color: olivedrab;
+}
+
+#leftside {
+  text-align: center;
+  background-color: green;
+  color: white;
+}
+#rightside {
+  text-align: center;
+  background-color: red;
+  color: white;
+}
+
+.jumbotron {
+  text-align: center;
+  background-color: #9c9a9a;
+  color: #ffffff; !important
+  margin-top: 30px;
+}
+  
+.panel{
+  border-radius: 5%;
+}
